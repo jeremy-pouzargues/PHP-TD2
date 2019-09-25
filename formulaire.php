@@ -6,9 +6,13 @@
 <?php
     start_page('Formulaire');
 
+
+echo '<hr/><br/><strong>Formulaire</strong><br/><hr/>';
+
+
     echo '<input type="text" name="Id" placeholder="Identifiant" /> <br/>
-          <input type="radio" name="CivH" placeholder="Homme"/> <br/>
-          <input type="radio" name="CivF" placeholder="Femme"/> <br/>
+          <input type="radio" name="CivH"/> Homme
+          <input type="radio" name="CivF"/> Femme <br/>
           <input type="text" name="Mail" placeholder="E-Mail"/> <br/>
           <input type="password" name="Mdp" placeholder="Mot de passe"/> <br/>
           <input type="password" name="CMdp" placeholder="Verification du mot de passe"/> <br/>
@@ -20,7 +24,7 @@
             <option value="Italie"/> Italie </option>
             <option value="Royaume-Uni"/> Royaume-Uni </option>
           </select> <br/>
-          <input type="checkbox" name="CG" placeholder="Conditions Générales"/> <br/>
+          <input type="checkbox" name="CG"/> Conditions Générales <br/>
           <input type="submit" name="submit" value="Envoyer"/> <br/>';
 
 
