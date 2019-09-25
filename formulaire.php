@@ -6,21 +6,22 @@
 <?php
     start_page('Formulaire');
 
-    echo '<input type="text" name="Identifiant"/>
-          <input type="radio" value="Civilité"/>
-          <input type="text" value="Mail"/>
-          <input type="password" name="Mdp" "/>
-          <input type="password" value="Confirmer Mdp"/>
-          <input type="text" value="Téléphone"/>
+    echo '<input type="text" name="Id" placeholder="Identifiant" />
+          <input type="radio" name="CivH" placeholder="Homme"/>
+          <input type="radio" name="CivF" placeholder="Femme"/>
+          <input type="text" name="Mail" placeholder="E-Mail"/>
+          <input type="password" name="Mdp" placeholder="Mot de passe"/>
+          <input type="password" name="CMdp" placeholder="Verification du mot de passe"/>
+          <input type="text" name="Tel" placeholder="Téléphone"/>
           <select name="Pays">
-            <option value="Allemagne"/> France </option>
-            <option value="Etats-Unis"/> France </option>
+            <option value="Allemagne"/> Allemagne </option>
+            <option value="Etats-Unis"/> Etats-Unis </option>
             <option value="France"/> France </option>
-            <option value="Italie"/> France </option>
-            <option value="Royaume-Uni"/> France </option>
+            <option value="Italie"/> Italie </option>
+            <option value="Royaume-Uni"/> Royaume-Uni </option>
           </select>
-          <input type="checkbox" value="CG"/>
-          <input type="submit"/>';
+          <input type="checkbox" name="CG" placeholder="Conditions Générales"/>
+          <input type="submit" name="submit" value="Envoyer"/>';
 
 
 
