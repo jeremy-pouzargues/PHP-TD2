@@ -1,6 +1,5 @@
 <?php
 
-    include 'data-processing.php';
 
     $dbLink = mysqli_connect("mysql-jeremy-pouzargues.alwaysdata.net"
         ,"189628","tdphp83")
@@ -12,7 +11,12 @@
 
     $today = date('Y-m-d');
 
-    $query = 'INSERT INTO user (ident, civ, mail, mdp, tel, pays, date) 
+
+    function inscription($id, $civ, $mail, $mdp, $tel, $pays)
+    {
+
+
+        $query = 'INSERT INTO user (ident, civ, mail, mdp, tel, pays, date) 
               VALUES (\'' . $id . '\',
                       \'' . $civ . '\',
                       \'' . $mail . '\',
@@ -21,22 +25,20 @@
                       \'' . $pays . '\',
                       \'' . $today . '\')';
 
-    if(!($dbResult = mysqli_query($dbLink, $query)))
-    {
-        echo 'Erreur de requête<br/>';
-        //Affiche le type d'erreur.
-        echo 'Erreur : ' . mysqli_error($dbLink) . '<br/>';
-        //Affiche la requête envoyée.
-        echo 'Requête : ' . $query . '<br/>';
-        exit();
-    }
-    else
-    {
-        echo "Bonjour $id, <br/>
+        if (!($dbResult = mysqli_query($dbLink, $query))) {
+            echo 'Erreur de requête<br/>';
+            //Affiche le type d'erreur.
+            echo 'Erreur : ' . mysqli_error($dbLink) . '<br/>';
+            //Affiche la requête envoyée.
+            echo 'Requête : ' . $query . '<br/>';
+            exit();
+        } else {
+            echo "Bonjour $id, <br/>
               votre inscription a bien été prise en compte, merci.";
+        }
+
+
     }
-
-
 
 
 

@@ -1,5 +1,6 @@
 <?php
 
+    include 'base.php';
 
     $id = $_POST['Id'];
     $civ = $_POST['Civ'];
@@ -29,6 +30,7 @@
         echo'<br/><strong>Bouton non géré!</strong><br/>';
     }
 
+    inscription($id, $civ, $mail, $mdp, $tel, $pays);
 
 
 ?>
