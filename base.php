@@ -1,4 +1,6 @@
 <?php
+
+
     $dbLink = mysqli_connect("mysql-jeremy-pouzargues.alwaysdata.net"
         ,"189628","tdphp83")
         or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
@@ -7,7 +9,16 @@
         or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
 
-    $query = 'SELECT id, mail, date FROM user';
+    $today = date('Y-m-d');
+
+    $query = 'INSERT INTO user (ident, civ, mail, mdp, tel, pays, date) 
+              VALUES (\'' . $id . '\',
+                      \'' . $civ . '\',
+                      \'' . $mail . '\',
+                      \'' . $mdp . '\',
+                      \'' . $tel . '\',
+                      \'' . $pays . '\',
+                      \'' . $today . '\'';
 
     if(!($dbResult = mysqli_query($dbLink, $query)))
     {
@@ -18,15 +29,17 @@
         echo 'Requête : ' . $query . '<br/>';
         exit();
     }
-
-
-    while($dbRow = mysqli_fetch_assoc($dbResult))
+    else
     {
-        echo $dbRow['id'] . '<br/>';
-        echo $dbRow['mail'] . '<br/>';
-        echo $dbRow['date'] . '<br/>';
-        echo '<br/><br/>';
+        echo "Bonjour $id, <br/>
+              votre inscription a bien été prise en compte, merci.";
     }
+
+
+
+
+
+
 
 
 ?>
