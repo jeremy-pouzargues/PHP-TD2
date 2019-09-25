@@ -1,20 +1,23 @@
 <?php
 
 
-    $dbLink = mysqli_connect("mysql-jeremy-pouzargues.alwaysdata.net"
-        ,"189628","tdphp83")
-        or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
-
-    mysqli_select_db($dbLink,"jeremy-pouzargues_db")
-        or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
 
-    $today = date('Y-m-d');
+
+
 
 
     function inscription($id, $civ, $mail, $mdp, $tel, $pays)
     {
 
+        $dbLink = mysqli_connect("mysql-jeremy-pouzargues.alwaysdata.net"
+            ,"189628","tdphp83")
+        or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
+
+        mysqli_select_db($dbLink,"jeremy-pouzargues_db")
+        or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
+
+        $today = date('Y-m-d');
 
         $query = 'INSERT INTO user (ident, civ, mail, mdp, tel, pays, date) 
               VALUES (\'' . $id . '\',
