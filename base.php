@@ -20,4 +20,13 @@
     }
 
 
+    while($dbRow = mysqli_fetch_assoc($dbResult))
+    {
+        echo $dbRow['id'] . '<br/>';
+        echo $dbRow['mail'] . '<br/>';
+        echo $dbRow['date'] . '<br/>';
+        echo '<br/><br/>';
+    }
+
+
 ?>
