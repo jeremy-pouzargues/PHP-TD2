@@ -1,5 +1,6 @@
 <?php
 
+    include 'data-processing.php';
 
     $dbLink = mysqli_connect("mysql-jeremy-pouzargues.alwaysdata.net"
         ,"189628","tdphp83")
