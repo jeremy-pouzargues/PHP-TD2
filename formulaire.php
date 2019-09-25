@@ -5,5 +5,6 @@
 
 <?php
     start_page('Formulaire');
+    phpinfo();
     end_page();
 ?>
