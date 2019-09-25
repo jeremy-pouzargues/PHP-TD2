@@ -6,10 +6,10 @@
 <?php
     start_page('Formulaire');
 
-    echo '<input type="text" value="Identifiant"/>
+    echo '<input type="text" name="Identifiant"/>
           <input type="radio" value="Civilité"/>
           <input type="text" value="Mail"/>
-          <input type="password" value="Mdp"/>
+          <input type="password" name="Mdp" "/>
           <input type="password" value="Confirmer Mdp"/>
           <input type="text" value="Téléphone"/>
           <select name="Pays">
