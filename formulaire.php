@@ -7,8 +7,9 @@
     start_page('Formulaire');
 
 
-echo '<hr/><br/><strong>Formulaire</strong><br/><hr/>';
-
+echo '<hr/><br/><strong>Formulaire</strong><br/><br/><hr/>';
+echo '<br/>
+      <br/>';
 
     echo '<input type="text" name="Id" placeholder="Identifiant" /> <br/>
           <input type="radio" name="CivH"/> Homme
