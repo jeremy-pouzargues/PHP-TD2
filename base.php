@@ -17,7 +17,6 @@
         mysqli_select_db($dbLink,"jeremy-pouzargues_db")
         or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
-        $today = date('Y-m-d');
 
         $query = 'INSERT INTO user (ident, civ, mail, mdp, tel, pays, date) 
               VALUES (\'' . $id . '\',
@@ -26,7 +25,7 @@
                       \'' . $mdp . '\',
                       \'' . $tel . '\',
                       \'' . $pays . '\',
-                      \'' . $today . '\')';
+                      \'' . NOW() . '\')';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             echo 'Erreur de requête<br/>';
