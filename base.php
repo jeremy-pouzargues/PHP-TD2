@@ -7,4 +7,5 @@
         or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
     $query = 'SELECT id, email, date FROM user';
+    echo "$query";
 ?>
