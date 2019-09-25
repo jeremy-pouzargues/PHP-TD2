@@ -11,12 +11,24 @@
     $cg = $_POST['CG'];
     $action = $_POST['action'];
 
+
+    $message = 'Voici vos identifiants d\'inscription :' . PHP_EOL;
+    $message .= 'Email : ' . $mail . PHP_EOL;
+    $message .= 'Mot de passe : ' . PHP_EOL . $mdp;
+
     if ($action == 'Mailer')
     {
+        mail($mail, 'Vos Identifiants', $message);
+        echo '<p> Votre mail a bien été envoyé </p>';
+        echo '<a href="http://jeremy-pouzargues.alwaysdata.net/PHP-TD2/formulaire.php"> 
+                    Cliquez pour retourner à l\'accueil </a> ';
 
     }
     else
     {
         echo'<br/><strong>Bouton non géré!</strong><br/>';
     }
+
+
+
 ?>
