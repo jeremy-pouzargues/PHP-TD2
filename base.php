@@ -18,7 +18,7 @@
                       \'' . $mdp . '\',
                       \'' . $tel . '\',
                       \'' . $pays . '\',
-                      \'' . $today . '\'';
+                      \'' . $today . '\')';
 
     if(!($dbResult = mysqli_query($dbLink, $query)))
     {
