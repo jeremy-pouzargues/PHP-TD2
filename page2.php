@@ -1,5 +1,10 @@
 <?php
 include 'utils.inc.php';
+session_start();
+if($_SESSION['login']!='ok')
+{
+    die('Erreurd\'authentification');
+}
 ?>
 
 
