@@ -13,8 +13,7 @@
         or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
 
-        $query = 'SELECT MDP as password FROM USER
-                    WHERE IDENT = ' . $log;
+        $query = 'SELECT MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
 
 
         if ($query == $pwd)
