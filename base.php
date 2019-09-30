@@ -16,18 +16,16 @@
         $query = 'SELECT MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
-            echo 'Erreur de requête<br/>';
+            /*echo 'Erreur de requête<br/>';
             //Affiche le type d'erreur.
             echo 'Erreur : ' . mysqli_error($dbLink) . '<br/>';
             //Affiche la requête envoyée.
-            echo 'Requête : ' . $query . '<br/>';
+            echo 'Requête : ' . $query . '<br/>';*/
             exit();
         }
 
         $resultat = $dbResult->fetch_row();
 
-        print_r($resultat['password']);
-        exit();
         if ($resultat['password'] == $pwd)
             return true;
         else
