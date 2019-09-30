@@ -16,7 +16,8 @@
         $query = 'SELECT MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
 
 
-        if ($query == $pwd)
+        $reponse = $query->fetch();
+        if ($reponse['password'] == $pwd)
             return true;
         else
             return false;
