@@ -24,7 +24,9 @@
             exit();
         }
 
-        if ($dbResult == $pwd)
+        $resultat = $dbResult->fetch_all();
+
+        if ($resultat[0] == $pwd)
             return true;
         else
             return false;
