@@ -26,7 +26,7 @@
 
         $resultat = $dbResult->fetch_all();
 
-        if ($resultat[0] == $pwd)
+        if ($resultat == $pwd)
             return true;
         else
             return false;
