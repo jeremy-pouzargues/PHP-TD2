@@ -13,7 +13,7 @@
         or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
 
-        $query = 'SELECT MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
+        $query = 'SELECT IDENT AS ident, MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             /*echo 'Erreur de requête<br/>';
@@ -24,10 +24,10 @@
             exit();
         }
 
-        $resultat = $dbResult->fetch_row();
+        $resultat = $dbResult->fetch_assoc();
 
 
-        if ($resultat[0] == $pwd)
+        if ($resultat['password'] == $pwd AND $resultat['ident'] == $log)
             return true;
         else
             return false;
