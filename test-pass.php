@@ -1,5 +1,6 @@
 <?php
     include 'utils.inc.php';
+    include 'base.php';
     $log = $_POST['Log'];
     $pwd = $_POST['Pwd'];
     if (login($log,$pwd))
