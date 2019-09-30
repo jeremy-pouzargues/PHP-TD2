@@ -19,14 +19,10 @@
             exit();
         }
 
-        $reponse = $query->fetch();
-
-        if ($reponse['password'] == $pwd)
+        if ($query == $pwd)
             return true;
         else
             return false;
-
-        $reponse->closeCursor();
 
 
 
