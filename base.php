@@ -19,7 +19,7 @@
             exit();
         }
 
-        if ($query['password'] == $pwd)
+        if ($query->fetch() == $pwd)
             return true;
         else
             return false;
