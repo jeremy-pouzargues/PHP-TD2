@@ -6,9 +6,6 @@
     if (login($log,$pwd))
         header('Location: page2.php');
     else
-        start_page('Erreur');
+        header('Location: login.php');
 
-    echo '<hr/><br/><strong>Erreur</strong><br/><br/><hr/>';
-
-    end_page();
 ?>
