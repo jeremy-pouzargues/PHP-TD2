@@ -13,7 +13,7 @@
         or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
 
-        $query = 'SELECT MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
+        $query = 'SELECT MDP FROM `user` WHERE IDENT = \'' . $log . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             exit();
