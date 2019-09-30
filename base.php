@@ -15,8 +15,12 @@
 
         $query = 'SELECT MDP AS password FROM `user` WHERE IDENT = \'' . $log . '\'';
 
+        if (!($dbResult = mysqli_query($dbLink, $query))) {
+            exit();
+        }
 
         $reponse = $query->fetch();
+
         if ($reponse['password'] == $pwd)
             return true;
         else
@@ -24,9 +28,7 @@
 
         $reponse->closeCursor();
 
-        if (!($dbResult = mysqli_query($dbLink, $query))) {
-            exit();
-        }
+
 
     }
 
