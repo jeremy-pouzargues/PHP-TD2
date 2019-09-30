@@ -28,6 +28,7 @@
         if ($resultat['password'] == $pwd)
             return true;
         else
+            echo $resultat['password'];
             return false;
 
 
