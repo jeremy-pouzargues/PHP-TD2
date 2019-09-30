@@ -26,7 +26,7 @@
 
         $resultat = $dbResult->fetch_row();
 
-        print_r($resultat);
+        print_r($resultat['password']);
         exit();
 
         if ($resultat['password'] == $pwd)
