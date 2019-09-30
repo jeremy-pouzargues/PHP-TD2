@@ -10,7 +10,8 @@ start_page('Login');
 echo '<hr/><br/><strong>Login</strong><br/><br/><hr/>';
 echo '<br/>';
 
-print_r($_GET['step']);
+$step = $_GET('step');
+print_r($step);
 exit();
 
 echo '<form action="test-pass.php" method="post">
