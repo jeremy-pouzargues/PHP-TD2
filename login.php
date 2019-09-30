@@ -7,12 +7,10 @@ include 'utils.inc.php';
 start_page('Login');
 
 
-echo '<hr/><br/><strong>Login</strong><br/><br/><hr/>';
+echo '<hr/><br/><strong>' . $_GET['step'] . '</strong><br/><br/><hr/>';
 echo '<br/>';
 
-$step = $_GET('step');
-print_r($step);
-exit();
+
 
 echo '<form action="test-pass.php" method="post">
             <input type="text" name="Log" placeholder="Login" /> <br/>

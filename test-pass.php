@@ -6,6 +6,6 @@
     if (login($log,$pwd))
         header('Location: page2.php');
     else
-        header('Location: login.php');
+        header('Location: login.php?step=ERROR');
 
 ?>
