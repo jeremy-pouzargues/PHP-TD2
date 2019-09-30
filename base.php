@@ -24,7 +24,8 @@
             exit();
         }
 
-        if ($query->fetch() == $pwd)
+        $resultat = $dbResult->fetch();
+        if ($resultat['password'] == $pwd)
             return true;
         else
             return false;
