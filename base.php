@@ -16,13 +16,13 @@
         $query = 'SELECT MDP as password FROM USER
                     WHERE IDENT = ' . $log;
 
-        $resultat = $query->fetch();
 
-        if ($resultat['password'] == $pwd)
+        if ($query['password'] == $pwd)
             return true;
         else
             return false;
 
+        $reponse->closeCursor();
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             exit();
