@@ -11,6 +11,7 @@ echo '<hr/><br/><strong>Login</strong><br/><br/><hr/>';
 echo '<br/>';
 
 print_r($_GET['step']);
+exit();
 
 echo '<form action="test-pass.php" method="post">
             <input type="text" name="Log" placeholder="Login" /> <br/>
