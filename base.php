@@ -24,7 +24,7 @@
             exit();
         }
 
-        $resultat = $dbResult->fetchOne();
+        $resultat = $dbResult->fetch_row();
 
         print_r($resultat['password']);
         exit();
