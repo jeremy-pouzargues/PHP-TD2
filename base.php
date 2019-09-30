@@ -17,7 +17,7 @@
                     WHERE IDENT = ' . $log;
 
 
-        if ($query['password'] == $pwd)
+        if ($query == $pwd)
             return true;
         else
             return false;
